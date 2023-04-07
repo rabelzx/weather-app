@@ -1,11 +1,16 @@
 const container = document.querySelector('.container');
 const search = document.querySelector('.search-box button');
+const input = document.querySelector('.search-box input');
 const weatherBox = document.querySelector('.weather-box');
 const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
 
-/*PESQUISAR CIDADE*/
+/*FAZ COM QUE A PRIMEIRA LETRA DO INPUT SEJA MAISCULA*/
+input.addEventListener('input', () => {
+  input.value = input.value.charAt(0).toUpperCase() + input.value.slice(1);
+});
 
+/*PESQUISAR CIDADE*/
 search.addEventListener('click', () => {
     const APIKey = '8ffa80474fdf5c0f0d4dee28f81390de'
     const city = document.querySelector('.search-box input').value;
