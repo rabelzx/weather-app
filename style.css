@@ -53,7 +53,7 @@ body{
     cursor: pointer;
     width: 50px;
     height: 50px;
-    background: #1C6758;
+    background: #3D8361;
     border-radius: 50%;
     font-size: 22px;
     transition: 0.4s ease;
@@ -61,7 +61,7 @@ body{
 
 .search-box button:hover{
     color: #DDDAE5;
-    background-color: #1C6758;
+    background-color: #3D8361;
 }
 
 
@@ -80,7 +80,7 @@ body{
     margin-right: 10px;
 }
 .city-name i{
-    color: #1C6758;
+    color: #3D8361;
     font-size: 28px;
     margin-right:10px;
 }
