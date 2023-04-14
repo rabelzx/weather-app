@@ -72,24 +72,27 @@ body{
 
 .weather-box{
     text-align: center;
-    color: #DDDAE5
+    color: #DDDAE5;
 }
 
 .weather-box img{
     width: 60%;
-    
+}
+
+.weather-box .name{
+    margin-top: 30px;
+    font-size: 28px;
 }
 
 .weather-box .temperature{
+    margin-top: 10px;
     position: relative;
     font-size: 4rem;
     font-weight: 800;
-    margin-top: 30px;
     margin-left: -16px;
 }
 
 .weather-box .temperature span{
-    
     position: absolute;
     margin-left: 4px;
     font-size: 1.5rem;

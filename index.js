@@ -14,7 +14,7 @@ input.addEventListener('input', () => {
 search.addEventListener('click', () => {
     const APIKey = '8ffa80474fdf5c0f0d4dee28f81390de'
     const city = document.querySelector('.search-box input').value;
-    //input.value = "";
+    input.value = "";
 
     if(city === '')
         return
@@ -37,10 +37,12 @@ search.addEventListener('click', () => {
             error404.classList.remove('fadeIn');
 
             const image = document.querySelector('.weather-box img');
+            const name = document.querySelector('.name');
             const temperature = document.querySelector('.weather-box .temperature');
             const description = document.querySelector('.weather-box .description');
             const humidity = document.querySelector('.weather-details .humidity span');
             const wind = document.querySelector('.weather-details .wind span');
+
 
             /*MOSTRA A FOTO DO CLIMA DE ACORDO COM O RETORNO DO JSON*/
             switch (json.weather[0].main) {
@@ -72,12 +74,13 @@ search.addEventListener('click', () => {
             description.innerHTML = `${json.weather[0].description}`;
             humidity.innerHTML = `${json.main.humidity}%`;
             wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
+            name.innerHTML = `${json.name}`;
 
             weatherBox.style.display = '';
             weatherDetails.style.display = '';
             weatherBox.classList.add('fadeIn');
             weatherDetails.classList.add('fadeIn');
-            container.style.height = '605px';
+            container.style.height = '650px';
 
         }
     )
