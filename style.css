@@ -7,28 +7,36 @@
 }
 
 body{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background: #101010;
 }
 
 .header{
+    padding: 10px 15px;
     display: flex;
     height: 3rem;
-    width: 100%;
+    left: 0;
+    right: 0;
     top: 0;
     justify-content: space-between;
     align-items: center;
     background-color: #202020;
     border-bottom: #000000 solid 1px;
     position: fixed;
-    /*0z-index: 10;*/
+    /*z-index: 10;*/
 }
 
-.container-wrapper{
+.header p{
+    color: #DDDAE5;
+}
+
+.header button{
+    /*background-color: #202020;*/
+    border: 1px solid #EEEEEE;
+    cursor: pointer;
+}
+
+.main-page{
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
