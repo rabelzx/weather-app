@@ -5,9 +5,16 @@ const weatherBox = document.querySelector('.weather-box');
 const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
 
+const check = document.getElementById('check');
+
 //primeira letra do input vazia
 input.addEventListener('input', () => {
   input.value = input.value.charAt(0).toUpperCase() + input.value.slice(1);
+});
+
+//mudar tema
+check.addEventListener('change', () => {
+    document.body.classList.toggle('light')
 });
 
 //pesquisar cidade

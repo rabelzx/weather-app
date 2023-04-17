@@ -4,19 +4,24 @@
     border: 0;
     outline: none;
     box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
 }
 
 body{
     background: #101010;
+    transition: background 0.2s linear;
+}
+
+body.light{
+    background-color: #EEEEEE;
 }
 
 .header{
-    padding: 10px 15px;
     display: flex;
     height: 3rem;
-    left: 0;
-    right: 0;
+    width: 100%;
     top: 0;
+    padding: 10px 15px;
     justify-content: space-between;
     align-items: center;
     background-color: #202020;
@@ -29,11 +34,50 @@ body{
     color: #DDDAE5;
 }
 
-.header button{
-    /*background-color: #202020;*/
-    border: 1px solid #EEEEEE;
-    cursor: pointer;
+.header .checkbox{
+    opacity: 0;
+    position: absolute;
 }
+
+.label{
+    cursor: pointer;
+    background-color: #101010;
+    height: 26px;
+    width: 50px;
+    padding: 5px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    transform: scale(1.1);
+}
+
+.fa-moon{
+    color: #f1c40f;
+}
+
+.fa-sun{
+    color: #f39c12;
+}
+
+.label .ball{
+    background-color: #fff;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    transform: translateX(0px);
+    transition: transform 0.2s linear; 
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(24px);
+}
+
+
 
 .main-page{
     height: 100vh;
